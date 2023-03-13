@@ -23,11 +23,17 @@ context.beginPath();
 
 context.moveTo(50,150);     // you don't need to change this line
 
-context.lineTo(350,150);    // this line gets replaced by a bezierCurveTo
-context.lineTo(350,50);     // this line gets replaced by a bezierCurveTo
-context.lineTo(200,100);    // this line gets replaced by a bezierCurveTo
-context.lineTo(50,50);      // this line gets replaced by a bezierCurveTo
-context.lineTo(50,150);     // this line gets replaced by a bezierCurveTo
+// context.lineTo(350,150);    // this line gets replaced by a bezierCurveTo
+// context.lineTo(350,50);     // this line gets replaced by a bezierCurveTo
+// context.lineTo(200,100);    // this line gets replaced by a bezierCurveTo
+// context.lineTo(50,50);      // this line gets replaced by a bezierCurveTo
+// context.lineTo(50,150);     // this line gets replaced by a bezierCurveTo
+
+context.bezierCurveTo(50 + 300/6, 150 + 100/6, 350 - 300/6, 150 + 100/6, 350, 150);
+context.bezierCurveTo(350 + 300/6, 150 - 100/6, 350 + 150/6, 50 + 50/6, 350, 50);
+context.bezierCurveTo(350 - 150/6, 50 - 50/6, 200 + 300/6, 100, 200, 100);
+context.bezierCurveTo(200 - 300/6, 100, 50 + 150/6, 50 - 50/6, 50, 50);
+context.bezierCurveTo(50 - 150/6, 50 + 50/6, 50 - 300/6, 150 - 100/6, 50, 150);
 
 context.closePath();
 context.lineWidth = 3;

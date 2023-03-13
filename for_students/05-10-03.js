@@ -18,9 +18,17 @@ function myTri(t) {
 
 function myTriAL(t) {
   // students should write this!
-  return [0, 0];
+  let st = t*100;   //(50+120+130)/3
+  if(st < 130){
+    return lerpPt(triPt1, triPt2, st / 130);
+  }
+  else if(st < 250){  //130+120
+    return lerpPt(triPt2, triPt3, (st - 130)/120);
+  }
+  else{
+    return lerpPt(triPt3, triPt1, (st - 250)/50);
+  }
 }
-
 
 // note that checking that canvas is the right type of element tells typescript
 // that this is the right type - it's a form of a safe cast 

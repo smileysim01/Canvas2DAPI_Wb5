@@ -1,1 +1,2 @@
 Student explains where in the picture they connected Beziers for G(1) or C(1) continuity.
+Each wave is made of several bezier curves joined together in C(1) continuity.
